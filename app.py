@@ -5,7 +5,6 @@ from pymessenger import Bot, Element, Button
 
 from pprint import pprint
 
-
 app = Flask(__name__)
 
 # Facebook apps link:   https://developers.facebook.com/apps/2222049801408664/dashboard/
@@ -67,15 +66,15 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'phone_number':
-                        response = "thank you for giving your phone number. please fill the form. http://google.com"
+                        response = "thank you for giving your phone number. please fill the form. https://sites.google.com/view/income-guru/"
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'thanks':
-                        response = " ভাল থাকবেন ।"
+                        response = " thank you too."
                         bot.send_text_message(sender_id, response)
 
                     if response == None:
-                        response = "আমি যাতে যোগ্যতা যাচাই করতে পারি ,তাই আপনার তথ্য দিন । নিচের লিংকে একটা ফর্ম আছে সেটি পুরন করুন । https://sites.google.com/view/human-migration-services/ "
+                        response = "we are handeling too much people right now. Sorry for your westing your time, I will get back to you as soon as possible."
                         bot.send_text_message(sender_id, response)
 
     return "ok", 200
