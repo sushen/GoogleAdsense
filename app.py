@@ -63,11 +63,11 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'yes':
-                        response = " you are welcome. please give me your phone number. please fill the form. http://google.com"
+                        response = "you are welcome. please give me your phone number."
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'phone_number':
-                        response = "thank you for giving your phone number."
+                        response = "thank you for giving your phone number. please fill the form. http://google.com"
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'thanks':
