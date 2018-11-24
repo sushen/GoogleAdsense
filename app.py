@@ -55,7 +55,7 @@ def webhook():
                     entity, value = wit_response(messaging_text)
 
                     if entity == 'greetings':
-                        response = " অাপনি কেমন আছেন"
+                        response = " hi, How Can I help you. "
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'start_income':
@@ -64,6 +64,10 @@ def webhook():
 
                     elif entity == 'yes':
                         response = " you are welcome. please give me your phone number."
+                        bot.send_text_message(sender_id, response)
+
+                    elif entity == 'phone_number':
+                        response = "thank you for giving your phone number."
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'thanks':
