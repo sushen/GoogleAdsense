@@ -1,2 +1,2 @@
-# Learn Python Together Bot
+# Google Adsense Bot
 
