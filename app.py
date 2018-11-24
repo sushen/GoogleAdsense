@@ -58,6 +58,11 @@ def webhook():
                         response = " অাপনি কেমন আছেন"
                         bot.send_text_message(sender_id, response)
 
+                    elif entity == 'Get_Started':
+                        response = " Do you want to know how to start income using Adsense"
+                        bot.send_text_message(sender_id, response)
+
+
                     elif entity == 'thanks':
                         response = " ভাল থাকবেন ।"
                         bot.send_text_message(sender_id, response)
