@@ -57,7 +57,7 @@ def webhook():
                         response = " hi, How Can I help you. "
                         bot.send_text_message(sender_id, response)
 
-                    elif entity == 'start_income':
+                    elif entity == 'Ad_sense_income':
                         response = " Do you want to know how to start income using Adsense?"
                         bot.send_text_message(sender_id, response)
 
