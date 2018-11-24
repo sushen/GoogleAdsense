@@ -74,7 +74,7 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'assist_me':
-                        response = "I am here. Ask you question dear."
+                        response = "I am here. Ask your question dear."
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'thanks':
