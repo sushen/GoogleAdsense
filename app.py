@@ -69,6 +69,10 @@ def webhook():
                         response = "thank you for giving your phone number. please fill the form so we can start working with you. https://sites.google.com/view/income-guru/"
                         bot.send_text_message(sender_id, response)
 
+                    elif entity == 'about_business':
+                        response = "Of course. tell me what you want to know."
+                        bot.send_text_message(sender_id, response)
+
                     elif entity == 'thanks':
                         response = " thank you too."
                         bot.send_text_message(sender_id, response)
