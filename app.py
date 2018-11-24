@@ -9,7 +9,7 @@ from pprint import pprint
 app = Flask(__name__)
 
 # Facebook apps link:   https://developers.facebook.com/apps/2222049801408664/dashboard/
-FB_ACCESS_TOKEN = "EAAPOUQnZAX9QBAHZCzrEzvohA96SXvq46q6hfooLqYyk7ppi6TCF2YZAZBWS19yx9TpxB6OJM3iC58qsuFNK2Bc0ZArahqVmAT2g1zgFbzUKcYcPR46GMxzWo8cfzNHoLvhFtzdNuYCExVt3OjwTFycGFdyxNjkOfZBdeTfABQpQZDZD"
+FB_ACCESS_TOKEN = "EAACZCFZCMSQ4QBALkTb5XvN9wFZBTfZAi1zdvTVIUlpa18AK2LbJ0ZAzWnZBsX9rBFZAsPQ8kgYWfhnfNo2M1EzKc3pK9m6QiZBVXURZCzyUSRZAAXvVzOSu7WNJnyHwHRV1dlbdZBKTIL5fLqfNazRLYDsroI6q6vCuCuNQ8dbpm5VSQZDZD"
 
 bot = Bot(FB_ACCESS_TOKEN)
 
@@ -23,7 +23,7 @@ def verify():
         if not request.args.get("hub.verify_token") == "hello":
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
-    return "Hello World", 200
+    return "Hello World Set Token", 200
 
 
 @app.route('/', methods=['POST'])
@@ -56,26 +56,6 @@ def webhook():
 
                     if entity == 'greetings':
                         response = " অাপনি কেমন আছেন"
-                        bot.send_text_message(sender_id, response)
-
-                    elif entity == 'services':
-                        response = " আমাদের অনেক রকমের সেবা আছে, তবে ফাইল চেক করাতে টাকা লাগে না । "
-                        bot.send_text_message(sender_id, response)
-
-                    elif entity == 'assist':
-                        response = " বলুন আপনাকে কিভাবে সাহায্য করতে পারি । "
-                        bot.send_text_message(sender_id, response)
-
-                    elif entity == 'recommend':
-                        response = " আপনি কাজের জন্য না পরাশুনা করতে যাবেন । "
-                        bot.send_text_message(sender_id, response)
-
-                    elif entity == 'business':
-                        response = " আপনি কোন দেশে যাবেন ? "
-                        bot.send_text_message(sender_id, response)
-
-                    elif entity == 'location':
-                        response = " অাপনি কি এখানে যাওয়ার যোগ্যতা যাচাই করতে চান । "
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'thanks':
