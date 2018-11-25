@@ -66,7 +66,7 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'phone_number':
-                        response = "thank you for giving your phone number. please fill the form so we can start working with you. https://sites.google.com/view/income-guru/"
+                        response = "Thank you for giving your phone number. please fill the form so we can start working with you. https://sites.google.com/view/income-guru/"
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'about_business':
@@ -86,7 +86,7 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
                     if response == None:
-                        response = "we are handeling too much people right now. Sorry for your westing your time, I will get back to you as soon as possible."
+                        response = "We are handling too many people right now. Sorry for your wasting your time, I will get back to you as soon as possible."
                         bot.send_text_message(sender_id, response)
 
     return "ok", 200
