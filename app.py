@@ -93,7 +93,7 @@ def webhook():
 
 
 @app.route('/Privacy-Policy')
-def PrivacyPolicy():
+def privacy_policy():
     return render_template("Privacy-Policy.html")
 
 
