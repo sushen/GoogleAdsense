@@ -1,5 +1,5 @@
 import sys
-from flask import Flask, request
+from flask import Flask, request, render_template
 from utils import wit_response
 from pymessenger import Bot, Element, Button
 
@@ -22,7 +22,7 @@ def verify():
         if not request.args.get("hub.verify_token") == "hello":
             return "Verification token mismatch", 403
         return request.args["hub.challenge"], 200
-    return "Hello World Set Token", 200
+    return render_template("index.html")
 
 
 @app.route('/', methods=['POST'])
@@ -90,6 +90,11 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
     return "ok", 200
+
+
+@app.route('/Privacy-Policy')
+def PrivacyPolicy():
+    return render_template("Privacy-Policy.html")
 
 
 def log(message):
