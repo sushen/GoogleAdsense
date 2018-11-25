@@ -78,7 +78,7 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'recommend':
-                        response = "I recommend will be start earning with adsense."
+                        response = "My recommend will be start earning with adsense."
                         bot.send_text_message(sender_id, response)
 
                     elif entity == 'thanks':
