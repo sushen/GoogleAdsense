@@ -86,7 +86,7 @@ def webhook():
                         bot.send_text_message(sender_id, response)
 
                     if response == None:
-                        response = "We are handling too many people right now. Sorry for your wasting your time, I will get back to you as soon as possible."
+                        response = ""
                         bot.send_text_message(sender_id, response)
 
     return "ok", 200
