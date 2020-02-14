@@ -96,6 +96,10 @@ def webhook():
 def privacy_policy():
     return render_template("Privacy-Policy.html")
 
+@app.route('/basic')
+def basic():
+    return render_template("basic.html")
+
 
 def log(message):
     # previously it was print now I just Use Petty Print
